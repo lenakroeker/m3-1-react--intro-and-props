@@ -7,6 +7,70 @@
   - a text color of #000
   - a background color of #e9e9eb
 */
+body {
+  margin-bottom:200px;
+}
 .chat-stream {
+  margin: 30px;
   flex: 1;
 }
+
+.message {
+  display: grid;
+  margin: 0;
+  grid-auto-columns: max-content;
+  grid-template-rows: 30px 50px;
+  grid-template-areas: 
+  "user user user"
+  "avatar rtip message";
+}
+
+.chat-stream:last-of-type {
+  margin-bottom: 70px;
+}
+
+#user {
+  margin-left: 60px;
+  font-size: 13px;
+  margin-bottom: 0;
+  grid-area: user;
+}
+
+#avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  grid-area: avatar;
+}
+
+#body {
+  margin:0 0 5px 15px;
+  background: #e9e9eb;
+  padding: 14px;
+
+  width: auto;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline;
+  grid-area: message;
+}
+
+
+#body.sent {
+  background: rgb(21, 135, 250);
+  color: white;
+margin-left: auto;
+
+}
+
+.message-sent {
+  display: flex;
+  justify-content: right;
+
+
+}
+
+#rtip {
+  grid-area: rtip;
+}
+
